@@ -1,1 +1,0 @@
-As a computer engineer student,
