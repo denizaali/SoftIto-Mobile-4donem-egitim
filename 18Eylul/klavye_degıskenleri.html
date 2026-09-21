@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mobil Klavye Değişkenleri </title>
+    <style>
+
+        body{
+            font-family: system-ui, -apple-system, BlinkMacSystemFont,
+             'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+             'Open Sans', 'Helvetica Neue', sans-serif;
+             padding: 20px;
+             background-color: #f8fafc;
+             color: #0f172a;
+             line-height: 1.5;
+        }
+
+        .form-group{
+            margin-bottom: 16px;
+        }
+        label{
+            display: block;
+            font-weight: 600;
+            margin-bottom: 6px;
+            font-size: 13px;
+        }
+        input{
+            width:100%;
+            padding: 12px;
+            border: 1.5px solid #cbd5e1;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+        input:focus{
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px  rgba(50, 130, 246, 0.3);
+        }
+        .hint{
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Mobil Sanal Klavye Girişleri</h3>
+
+    <form id="mobileForm">
+        <div class="form-group">
+            <label for="txtName">Ad Soyad {Otomatik Büyük Harf }</label>
+            <input type="text"  id="txtName" name="full_name"
+            placeholder="This is placeholder"  autocomplete="name" 
+            autocapitalize="words" enterkeyhint="next" >
+            <div class="hint">autocapitalize her kelimenin ilk harfini büyük yapar </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="txtEmail">  Eposta düzetlme kapalı</label>
+            <input type="email"  id="txtEmail" placeholder="alı@gmail.com" autocomplete="email" autocapitalize="none" enterkeyhint="next" >
+        </div>
+        <div class="hint">@ve .com tuşları eklenir </div>
+
+        <div class="form-group">
+            <label for="txtCard">Kredi kartı sayısal tuş takımı</label>
+            <input type="text" name="card_number" id="txtCard", inputmode="numeric"
+            placeholder="123455669"enterkeyhint="next" maxlength="19" autocomplete="cc-number">
+            <div class="hint">Numeric sayısal tuş takımı açar</div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="txtAmount">Para transferi Tutarı</label>
+            <input type="text" id="txtAmount" name="amount" placeholder="1.250"
+            inputmode="decimal" enterkeyhint="next" >
+            <div class="hint"> Mobilde viegüllü noktalı ondalıkk sayı</div>
+
+        </div>
+
+        <div class="form-group">
+            <label for="">Sms Doğrulama Kodu</label>
+            <input type="text" id="txtOtp"placeholder="123456" inputmode="numeric"
+            maxlength="6">
+            <div class="hint"> Sms geldiğinde kodu doldur önerisi  çıkarır</div>
+        </div>
+    </form>
+    
+
+
+
+
+</body>
+</html>
