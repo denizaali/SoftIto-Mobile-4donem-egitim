@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   <style>
+        *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .chat-row{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .chat-row.outgoing{
+        justify-content: flex-end;
+    }
+    .avatar{
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #cbd5e1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: white;
+        margin-right: 10px;
+    }
+    .chat-row.outgoing .avatar{
+        background-color: #10b981;
+        margin-right: 0;
+        margin-left: 10px;
+    }
+    .message-content{
+        max-width: 70%;
+        background-color: #f1f5f9;
+        padding: 10px 15px;
+        border-radius: 16px 16px 16px 16px;
+    }
+   </style>
+
+</head>
+<body>
+   <div class="chat-row">
+        <div class="avatar">SÇ</div>
+        <div class="message-content">
+            <strong>Selahaddin Hoca:</strong>
+            <p>Arkadaşlar flexbox mantığını kavradıkmı?Bence Shad tam olarak kavrayamadı gibi:)</p>
+        </div>
+    </div>
+    <div class="chat-row outgoing">
+        <div class="avatar" style="background: #10b981;">SM</div>
+        <div class="message-content">
+            <p>Hocam ben anladım ya neden böyle diyorsunuz.Bende Html css artık yazabilirim gibi geliyor :P</p>
+        </div>
+    </div>>
+    
+</body>
+</html>

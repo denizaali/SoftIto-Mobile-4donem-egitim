@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* Altın Kural tüm proenin ilk satırında bu olmalıdır */
+        *,
+        **::before
+        **::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            padding: 20px;
+            background-color: #f8fafc; 
+        }
+        .box-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+
+        }
+
+        /* content- box sorunu gözlemlemek için */
+        .broken-box {
+            width: 100%;
+            padding: 24px;
+            border: 6px solid #ef4444;
+            background-color: #fee2e2;
+            box-sizing: content-box; /* Bu satır sorun yaratıyor */
+        }
+
+        /* Fixed Box */
+        .fixed-box {
+            width: 100%;
+            padding: 24px;
+            border: 6px solid #22c55e;
+            background-color: #dcfce7;
+            box-sizing: border-box; /* Bu satır sorunu çözüyor */
+            border-radius: 12px;
+        }
+        /*  Metin taşmasını engelleme (mobil) */
+        .truncate-text {
+            background:white;
+            margin-top: 12px;
+            width: 100%;
+            max-width: 250px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border: 1px solid #e5e7eb;
+            padding: 8px;
+            border-radius: 6cqmax;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-container">
+
+        <h3>Content Box Sorunu</h3>
+        <div class="broken-box">
+            Bu kutu <strong>content-box</strong> kullanıyor. 
+            Bu nedenle padding ve border genişliği kutunun toplam genişliğine ekleniyor. Bu, kutunun beklenenden daha büyük görünmesine neden olabilir.
+    </div>
+
+        <h3>Fixed Box</h3>
+        <div class="fixed-box">
+            Bu kutu <strong>border-box</strong> kullanıyor. 
+            Bu nedenle padding ve border genişliği kutunun toplam genişliğine eklenmiyor. 
+            Bu, kutunun beklenen boyutunda görünmesine neden olur.
+            <h3>Metin Taşması</h3>
+            <div class="truncate-text" title="Bu metin çok uzun ve taşacak. Ellipsis ile kırpılacak.">
+            Bu metin çok uzun ve taşacak. Ellipsis ile kırpılacak.
+            </div>
+
+        </div>
+
+        
+
+
+
+    
+</body>
+</html>
