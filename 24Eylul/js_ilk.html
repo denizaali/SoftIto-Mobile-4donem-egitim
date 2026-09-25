@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+
+
+
+
+
+
+
+
+
+    <script>
+      /*
+        if(true){
+            var tehlikelSayı=999;
+        };
+        //
+        
+        console.log("Sızıntı",tehlikelSayı);
+
+        if(true){
+            let guvenlıSayı=43;
+            const PI=3.1245;
+            console.log("oda içi",guvenlıSayı,PI);
+        };
+        console.log(guvenlıSayı);
+
+        //const API_URL="https://kodusta.com/v1";
+        //const API_URL="https://kodusta.com/v1";
+
+
+        const arac={
+            marka:"Togg",model:"T10X"
+        };
+        console.log(arac);
+        arac.model="T113X";
+        //CONST DEĞİŞTİRELEMEZ lakin dizi içeriisnde değişiklikler yapıabilir.
+*/
+      /*
+        const isim = "Selahaddin";
+        const bataryaKapasite = 88.5;
+        const sarjTamamlandı = false;
+        let sonrakiRandevu;
+
+        const servisNotu=null;
+        const büyükSayı=24343353545n;
+
+        const gizliAnahtar=Symbol("id");
+
+        console.log(typeof isim);
+        console.log(typeof bataryaKapasite);
+        console.log(typeof sarjTamamlandı);
+        console.log(typeof sonrakiRandevu);
+        console.log(typeof servisNotu);
+
+        */
+
+      //otomatik tip çeviriisi
+      /*
+        console.log("5"+2);//+ yapmaz   jsde metin birleştirmedir
+        console.log("5"-2);  // - çevireye zorlar
+        console.log("8"*"9");  //çarpma sayıya çeviriri
+        console.log("bes"*5);  //  
+        */
+      /*
+       console.log(typeof NaN);
+       console.log(NaN===NaN); FALSE
+       console.log(Number.isNaN(NaN)); TRUE  
+       */
+
+      //MANUEL  dönüşümm
+
+      /*
+       const stringFiyat="1453.33";  //153,56 olduğunda iki farklı sitring algıladı 
+       const sayıFiyat = Number(stringFiyat);
+       const pixelDegeri = parseInt("48px",10);
+       const metinSayı= String(2026);
+
+       console.log(stringFiyat);
+       console.log(sayıFiyat);
+       console.log(pixelDegeri);
+       console.log(metinSayı);
+       */
+      //Katı Eşittlik
+      //neden her zaman  === kullanmalıyız
+      /*
+      console.log("5" == 5);
+
+      console.log(5 === "5"); // false
+      console.log(0 == false); // true geveşek eşittlik
+      console.log(null == undefined); //true
+      console.log(null === undefined); // false
+
+      //Template Literals
+      const kullanici = "Lokman Gormus";
+      const bakiye = 1000;
+      const harcama = 10000;
+
+      const eskiMesaj =
+        "Sayın " +
+        kullanici +
+        ", Kalan Bakiyeniz:" +
+        (bakiye - harcama) +
+        " TL'dir.";
+      console.log(eskiMesaj);
+
+      //Modern E6 Standartları
+
+      const modernMesaj = `Sayın ${kullanici},
+Bugünkü Harcamanız: ${harcama}₺,
+Kalan Bakiyeniz: ${bakiye - harcama}₺
+Durum:${bakiye - harcama > 1000 ? "Güvenli Bakiye" : "Kritik Bakiye"}`;
+
+      console.log(modernMesaj);
+      */
+
+      /*
+      const bataryaSeviyesi = 14;
+      const istasyonUygunmu = true;
+      const bakiyeTL = 450;
+      const minimumGirisTutari = 200;
+
+      if (!istasyonUygunmu) {
+        console.log("İstasyon şuanda Servis dışı veya meşgul");
+      } else if (bakiyeTL < minimumGirisTutari) {
+        console.log(
+          `bakiye yetersiz! en az ${minimumGirisTutari} gereklidir. Mevcut: ${bakiyeTL} ₺`,
+        );
+      } else if (bataryaSeviyesi <= 20) {
+        console.log("Kritik Seviye Ultra hızlı Dc şarj moduna geçiliyor ");
+      } else {
+        console.log("Stardart Şarj Başlatılabilir.");
+      }
+        */
+       
+
+        //klasikk fonksiyon
+        function toplaKlasik(sayı1,sayı2){
+            return sayı1 * sayı2;
+        }
+
+        //mmodern fonksiyon 
+        const toplaModern = (sayı1,sayı2)=>{
+            return sayı1 + sayı2;
+        }
+
+        const toplaKisa=(sayı1,sayı2) =>sayı1+sayı2;
+
+        //tek parametreli 
+        const karesiniaL = sayi => sayi*sayi;
+
+        const profilUret = (ad,rol)=>({
+            ad:ad,
+            rol:rol,
+            kayitTarihi:2026
+        });
+
+        console.log("Toplama Sonucu " ,toplaKisa(15,27));
+        console.log(karesiniaL(8));
+
+
+        const ındırımlıTutar = (tutar,indirimTutarı)=>tutar*((100-indirimTutarı)/100);
+
+        console.log(ındırımlıTutar(1000,25));
+        
+
+
+
+    </script>
+  </body>
+</html>
